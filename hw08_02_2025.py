@@ -45,3 +45,21 @@ year_sorted_dict = dict(sorted(full_dict.items(), key=lambda item: item[1]['year
 # 8. Отсортируйте словарь `full_dict` по двум параметрам с использованием `lambda`, создавая аналогичный по структуре словарь. Обязательно укажите, по каким параметрам вы производите сортировку.
 year_title_sorted_dict = sorted(full_dict.items(), key=lambda item: (item[1]['year'] if isinstance (item[1]['year'], int) else 0, item[1]['title'] if isinstance (item[1]['title'], str) else ''))
 # pprint(year_title_sorted_dict, sort_dicts=False, indent= 4)
+
+# print('----------------9---------------')
+# 9. Напишите однострочник, который отфильтрует и отсортирует `full_dict` с использованием `filter` и `sorted`.
+filter_sorted_dict = dict(sorted(filter(lambda film: film[1]['stage'] == "Первая фаза", full_dict.items())), key=lambda film: film[1]['year'])
+# print(filter_sorted_dict)
+
+# print('----------------10---------------')
+# 10. **Опционально:** Добавьте аннотацию типов для переменных, содержащих результаты, и проверьте код с помощью `mypy`. Оставьте комментарий о успешной проверке.
+
+print('----------------11---------------')
+pprint(f'задание 2 \n{num_list}', sort_dicts=False, indent= 4)
+pprint(f'задание 3 \n{result_dict}', sort_dicts=False, indent= 4)
+pprint(f'задание 4 \n{unique_values}', sort_dicts=False, indent= 4)
+pprint(f'задание 5 \n{full_dict_copy}', sort_dicts=False, indent= 4)
+pprint(f'задание 6 \n{ch_filtered}', sort_dicts=False, indent= 4)
+pprint(f'задание 7 \n{year_sorted_dict}', sort_dicts=False, indent= 4)
+pprint(f'задание 8 \n{year_title_sorted_dict}', sort_dicts=False, indent= 4)
+pprint(f'задание 9 \n{filter_sorted_dict}', sort_dicts=False, indent= 4)
